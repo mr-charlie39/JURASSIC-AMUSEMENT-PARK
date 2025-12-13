@@ -59,6 +59,8 @@ void menu(int people[],int p){
 }
 
 void zoo(){
+	char r_zoo ;
+	int p_zoo = 0 ;
 	Sleep(500);
 	
 	cout<<"\n"<<setw(15)<<"---------"<<endl;
@@ -77,7 +79,7 @@ void zoo(){
 	}
 	Sleep(500);
 	
-	cout<<"\n"<<setw(15)<<"----------"<<endl;
+	cout<<"\n\n"<<setw(15)<<"----------"<<endl;
 	cout<<setw(15)<<"| MONKEY |"<<endl;
 	cout<<setw(16)<<"----------\n"<<endl;
 	
@@ -93,7 +95,7 @@ void zoo(){
 	
 	Sleep(500);
 	
-	cout<<"\n"<<setw(17)<<"------------"<<endl;
+	cout<<"\n\n"<<setw(17)<<"------------"<<endl;
 	cout<<setw(17)<<"| OSTRICHE |"<<endl;
 	cout<<setw(18)<<"------------\n"<<endl;
 	
@@ -110,7 +112,7 @@ void zoo(){
 	
 	Sleep(500);
 	
-	cout<<"\n"<<setw(17)<<"------------"<<endl;
+	cout<<"\n\n"<<setw(17)<<"------------"<<endl;
 	cout<<setw(17)<<"| ELEPHANT |"<<endl;
 	cout<<setw(18)<<"------------\n"<<endl;
 	
@@ -120,11 +122,69 @@ void zoo(){
 	
 	string d_elephant = "The elephant is the \"largest land animal\" in the world. It has a \"long trunk\", \"big ears\", and \"strong tusks\". Elephants are \"herbivores\" and eat \"grass\", \"leaves\", and \"fruits\". They are \"intelligent\", \"gentle animals\" and usually live in groups.";
 	
-	for(int i  = 0 ; d_elephant.length() ; i++){
+	for(int i  = 0 ; i < d_elephant.length() ; i++){
 		cout<<d_elephant[i];
 		Sleep(50);
 	}
+	
+	cout<<"\n\nDo you want to ride in Elephant : \n--> Press y or 'Y' - for YES. \n--> Press n or 'N' - for NO. \n-> Enter you answer ... ";
+	cin>>r_zoo;
+	
+	if(r_zoo == 'y' || r_zoo == 'Y'){
+		cout<<"\n| Price of per Ride is --> 150 |"<<endl;
+		cout<<"How many of you want the ride : ";
+		cin>>p_zoo;
+		
+		money = money - (p_zoo*150);
+		
+		string r_elephant = "Hurahhhhhhhh!";
+		
+		for(int i = 0 ; i < r_elephant.length() ; i++){
+			cout<<r_elephant[i];
+			Sleep(70);
+		}
+	}else{
+		cout<<"Total amount you left is : "<<money<<endl;
+	}
+	
+	cout<<"\n"<<setw(80)<<"----------------------------------"<<endl;
+	cout<<setw(80)<<"| THANK YOU FOR VISITING THE ZOO |"<<endl;
+	cout<<setw(81)<<"----------------------------------\n"<<endl;
+	
 }
+struct v_ride{
+	string ride_name[4] = {"Rollar coaster","Rotating wheel","Riding-car","Rope swing"};
+	int ride_price[4] = {150,100,100,200};
+};
+void ride(){
+	v_ride r[4];
+	char l_ride;
+	cout<<"\n"<<setw(68)<<"---------"<<endl;
+	cout<<setw(68)<<"| RIDES |"<<endl;
+	cout<<setw(69)<<"---------\n"<<endl;
+	
+	cout<<"Do you want to take rides : \n --> Press y or Y - For YES .\n --> Press n or N - For NO . \n-> Enter your answer... ";
+	cin>>l_ride;
+	cout<<endl;
+	if(l_ride == 'y' || l_ride == 'Y'){
+		cout<<setw(5)<<"-----------------------------------------------------"<<endl;
+		for(int i = 0 ; i < 4 ; i++){
+			cout<<setw(5)<<"| "<<i+1<<"-) For - "<<r[i].ride_name[i];
+			cout<<setw(20)<<r[i].ride_price[i]<<" |";
+			cout<<endl;
+		}
+		cout<<setw(5)<<"-------------------------------------------------"<<endl;
+	}else{
+		cout<<"-----------"<<endl;
+		cout<<"| Notice: |"<<endl;
+		cout<<"-----------"<<endl;
+		
+		cout<<"Your atleast 1 member should take  the any ride : "<<endl;
+		cout<<"__________________________________________________"<<endl;
+	}
+
+}
+
 
 int main(){
 	int p = 0 , people [p] , w_z = 1;
@@ -132,7 +192,7 @@ int main(){
 	cout<<"\n"<<setw(80)<<"---------------------------"<<endl;
 	cout<<setw(80)<<"| JURRASIC AMUSEMENT PARK |"<<endl;
 	cout<<setw(81)<<"---------------------------\n"<<endl;
-	
+	cout<<setw(10)<<"-> Allowed people are from 1 to 5"<<endl;
 	cout<<"\n--> How many people are you : ";
 	cin>>p;
 	
@@ -153,7 +213,7 @@ int main(){
 	
 	
 	while(w_z == 1){
-	cout<<" --> Can we enter in the zoo : \n --> y or Y for yes .\n --> n or N for No.\n --> Enter your Answer... ";
+	cout<<" --> Can we enter in the zoo : \n --> y or Y for yes .\n --> n or N for No.\n -> Enter your Answer... ";
 	cin>>z;
 	if(z == 'y' || z == 'Y'){
         money -= 500;
@@ -167,5 +227,7 @@ int main(){
 	}
 	
 }
+  
+  ride();
 	
 }
