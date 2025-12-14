@@ -1,9 +1,51 @@
-#include<iostream>
+#include <iostream>
 #include <iomanip>
 #include <windows.h>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int money = 5000;
+struct haunted{
+	string name[4] = {"Alliens","Skeletons","Demogorgans","Zombies"};
+	int index;
+};
+void haunted_house(){
+	haunted h[4];
+    bool repeat;
+
+    srand(time(0));  
+    for (int i = 0; i < 4; i++) {
+        do {
+            repeat = false;
+            h[i].index = rand() % 6;   
+
+            for (int j = 0; j < i; j++) {
+                if (h[i].index == h[j].index) {
+                    repeat = true;
+                    break;
+                }
+            }
+        } while (repeat);
+    }
+
+   for(int i = 0 ; i < 4 ; i++){
+   	if(h[i].index == 0){
+   		break;
+	   }
+	if(i==3){
+		h[2].index = 0;
+	}
+   }
+   
+    cout << "\n Array elements (no repetition): ";
+    for (int i = 0; i < 4; i++) {
+        cout << h[i].index << " ";
+    }
+	
+}
+
+
 void menu(int people[],int p){
 	int age = 0;
 	cout<<"\n"<<setw(75)<<"----------------"<<endl;
@@ -58,9 +100,17 @@ void menu(int people[],int p){
 	
 }
 
-void zoo(){
+void zoo(int people){
+    
+    Sleep(2000);
+	cout<<"\n"<<setw(73)<<"-------"<<endl;
+	cout<<setw(73)<<"| ZOO |"<<endl;
+	cout<<setw(73)<<"-------"<<endl;
+
+
 	char r_zoo ;
-	int p_zoo = 0 ;
+	int p_zoo = 0 , r_e_zoo = 1;
+	string r_elephant = "Hurahhhhhhhh!";
 	Sleep(500);
 	
 	cout<<"\n"<<setw(15)<<"---------"<<endl;
@@ -132,12 +182,20 @@ void zoo(){
 	
 	if(r_zoo == 'y' || r_zoo == 'Y'){
 		cout<<"\n| Price of per Ride is --> 150 |"<<endl;
-		cout<<"How many of you want the ride : ";
-		cin>>p_zoo;
 		
+		while(r_e_zoo == 1){
+		cout<<"\nHow many of you want the ride : ";
+		cin>>p_zoo;
+		if(p_zoo > 0 && p_zoo <= people){
 		money = money - (p_zoo*150);
 		
-		string r_elephant = "Hurahhhhhhhh!";
+		
+		r_e_zoo++;
+	}else {
+		cout<<"\nYou are entering wrong people!!!"<<endl;
+		cout<<"--> Enter again : "<<endl;
+	}
+}
 		
 		for(int i = 0 ; i < r_elephant.length() ; i++){
 			cout<<r_elephant[i];
@@ -158,7 +216,8 @@ struct v_ride{
 };
 void ride(){
 	v_ride r[4];
-	char l_ride;
+	char l_ride ='y';
+	int p_ride, c_ride ;
 	cout<<"\n"<<setw(68)<<"---------"<<endl;
 	cout<<setw(68)<<"| RIDES |"<<endl;
 	cout<<setw(69)<<"---------\n"<<endl;
@@ -174,6 +233,26 @@ void ride(){
 			cout<<endl;
 		}
 		cout<<setw(5)<<"-------------------------------------------------"<<endl;
+		while(l_ride == 'y' || l_ride == 'Y'){
+			if(money >=100){
+			
+		cout<<"\n--> How many of you want the ride : ";
+		cin>>p_ride;
+		
+		cout<<"\nWhich ride do you want : ";
+		cin>>c_ride;
+		
+		money = money - (p_ride*r[c_ride-1].ride_price[c_ride-1]);
+		cout<<money<<endl;
+		
+		cout<<"\n\n-->Do you want to take another ride : \n--> Press y or Y - For Yes .\n--> Press n or N - For  No . \n-> Enter your answer...";
+		cin>>l_ride;
+	}else{
+		cout<<"Insufficiant amount!!!"<<endl;
+		break;
+	}
+	}
+		
 	}else{
 		cout<<"-----------"<<endl;
 		cout<<"| Notice: |"<<endl;
@@ -187,8 +266,10 @@ void ride(){
 
 
 int main(){
-	int p = 0 , people [p] , w_z = 1;
-	char z ;
+	int p = 0 , people [p] , w_choice = 1 , choice;
+	
+	
+
 	cout<<"\n"<<setw(80)<<"---------------------------"<<endl;
 	cout<<setw(80)<<"| JURRASIC AMUSEMENT PARK |"<<endl;
 	cout<<setw(81)<<"---------------------------\n"<<endl;
@@ -206,28 +287,30 @@ int main(){
 	cout<<"\n"<<setw(80)<<"---------------------"<<endl;
 	cout<<setw(80)<<"| AREA FOR VISITING |"<<endl;
 	cout<<setw(81)<<"---------------------\n"<<endl;
-	Sleep(3000);
-	cout<<"\n"<<setw(73)<<"-------"<<endl;
-	cout<<setw(73)<<"| ZOO |"<<endl;
-	cout<<setw(73)<<"-------"<<endl;
 	
 	
-	while(w_z == 1){
-	cout<<" --> Can we enter in the zoo : \n --> y or Y for yes .\n --> n or N for No.\n -> Enter your Answer... ";
-	cin>>z;
-	if(z == 'y' || z == 'Y'){
-        money -= 500;
-		zoo();
-		w_z++;
-	}
-	else {
-		cout<<endl;
-		cout<<"--> Waiting for your response !!! "<<endl;
+	
+	while(w_choice == 1){
+	cout<<"\n --> Which area in which you want to enter : \n --> 1- ZOO .\n --> 2- Rides Joy land.\n --> 3- Haunted house. \n -> Enter your answer... ";
+	cin>>choice;
+	if(choice == 1){
 		
+        money -= 500;
+		zoo(p);
+
+	}else if(choice == 2){
+		
+		ride();
+		
+	}else if(choice == 3){
+		
+		haunted_house();
+		
+	}else{
+		cout<<"Invalid!!! , Enter again... "<<endl;
 	}
 	
 }
   
-  ride();
 	
 }
