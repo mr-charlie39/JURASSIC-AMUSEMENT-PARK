@@ -11,12 +11,13 @@ int money = 5000;
 struct haunted {
     string name[4] = {"Alliens", "Skeletons", "Demogorgans", "Zombies"};
     int index;
+    int name_index[4] = {1,2,3,4};
 };
 
 void haunted_house() {
     haunted h[4];
     bool repeat;
-    int index[4] , choice= 0;
+    int index[4] , choice= 0 , w_l_house = 1 , l_house_quiz = 0;
     
     //Backend:
     srand(time(0));
@@ -24,7 +25,7 @@ void haunted_house() {
     for (int i = 0; i < 4; i++) {
         do {
             repeat = false;
-            h[i].index = rand() % 6;
+            h[i].index = rand() % 4 + 1;
 
             for (int j = 0; j < i; j++) {
                 if (h[i].index == h[j].index) {
@@ -35,14 +36,7 @@ void haunted_house() {
         } while (repeat);
     }
 
-    for (int i = 0; i < 4; i++) {
-        if (h[i].index == 0) {
-            break;
-        }
-        if (i == 3) {
-            h[2].index = 0;
-        }
-    }
+    
 
     cout << "\n Array elements (no repetition): ";
     for (int i = 0; i < 4; i++) {
@@ -51,9 +45,9 @@ void haunted_house() {
     
     //Frontend:
     
-    cout << "\n" << setw(73) << "-----------------" << endl;
+    cout << "\n" << setw(73) << "=================" << endl;
     cout << setw(73) << "| HAUNTED HOUSE |" << endl;
-    cout << setw(73) << "-----------------" << endl;
+    cout << setw(73) << "=================" << endl;
     
     
     cout<<"--> Lets Take a quick quiz : "<<endl;
@@ -62,14 +56,16 @@ void haunted_house() {
     cout<<setw(10)<<"| Choice the Position from 1 to 4 |"<<endl;
     cout<<setw(10)<<"-----------------------------------"<<endl;
     
+    cout<<"---------------\t\t"<<"------------"<<endl;
+    cout<<"| Characters: |\t\t"<<"| Position |"<<endl;
+    cout<<"---------------\t\t"<<"------------\n"<<endl;
+    
     for(int i  = 0 ; i < 4; i++){
     	
-    	if(i==0 || i== 3){
-    		cout<<h[i].name[i]<<"\t\t\t";
-		}else{
-			cout<<h[i].name[i]<<"\t\t";
-		}
+    	cout<<i+1<<" - "<<h[i].name[i]<<"\t\t\t";
+    	
     	cin>>choice;
+    	
     	if(choice >= 1 && choice <=4){
     		index[i] = choice;
 		}else{
@@ -81,6 +77,26 @@ void haunted_house() {
 		}
     }
     
+    
+    for(int i = 0 ; i  < 4 ; i++){
+    	if(h[i].index != index[i]){
+    		cout<<"You Lose !!!"<<endl;
+    		cout<<"Please deposit 250 Rupees... ";
+    		cin>>l_house_quiz;
+    		
+    		while(w_l_house == 1){
+    		if(l_house_quiz == 250){
+    		money -= l_house_quiz;
+    		w_l_house++;
+    	}else {
+    		cout<<"Invalid Amount : "<<endl;
+    		cout<<"Again Enter : "<<endl;
+		}
+	}     break;
+//		}else if(h[4].index == index[4]){
+//			cout<<"You Won !!!"<<endl;
+//		}
+	}
 }
 
 //void menu(int people[], int p) {
