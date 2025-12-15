@@ -501,15 +501,30 @@ void haunted_house() {
 
 int main(){
     int p = 0, w_choice = 1, choice;
+    int l_c = 1;
 
     cout << "\n" << setw(80) << "---------------------------" << endl;
     cout << setw(80) << "| JURRASIC AMUSEMENT PARK |" << endl;
     cout << setw(81) << "---------------------------\n" << endl;
-    cout << setw(10) << "-> Allowed people are from 1 to 5" << endl;
-
+    cout << setw(10) << "-> Allowed people are from 1 to 5 : " << endl;
+    cout << setw(10) << "-----------------------------------"<<endl;
+    
+    while(l_c == 1){
     cout << "\n--> How many people are you : ";
     cin >> p;
-
+    
+    if(p>5 || p<=0){
+    	
+    	cout<<"\n------------------"<<endl;
+    	cout<<"| Again enter... |"<<endl;
+    	cout<<"------------------"<<endl;
+    	
+    	cout << setw(10) << "\n-> Allowed people are from 1 to 5" << endl;
+    	
+	}else {
+		break;
+	}
+}
     int people[p];
     for (int i = 0; i < p; i++) {
         people[i] = i + 1;
