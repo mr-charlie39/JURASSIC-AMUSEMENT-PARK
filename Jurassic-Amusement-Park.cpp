@@ -8,6 +8,27 @@ using namespace std;
 
 int money = 5000;
 
+
+void box(){
+	
+	cout<<"\t\t\t========================================================================="<<endl;
+	cout<<"\t\t\t|| "<<setw(70)<<" ||"<<endl;
+	cout<<"\t\t\t|| "<<setw(63)<<"__________________"<<setw(7)<<" ||"<<endl;
+	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(5)<<"____"<<setw(5)<<"____"<<setw(5)<<"____"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(5)<<"___|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t\t|| "<<setw(44)<<"__________________"<<setw(2)<<" |"<<setw(2)<<"|"<<setw(5)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(5)<<"|__|"<<setw(5)<<"|__|"<<setw(5)<<"|__|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(5)<<""<<setw(12)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t\t|| "<<setw(63)<<"------------------"<<setw(7)<<" ||"<<endl;
+	cout<<"\t\t\t========================================================================="<<endl;
+}
+
+
+
+
+
+
 void menu(int people[], int p) {
     int age = 0;
 
@@ -506,52 +527,55 @@ int main(){
     cout << "\n" << setw(80) << "---------------------------" << endl;
     cout << setw(80) << "| JURRASIC AMUSEMENT PARK |" << endl;
     cout << setw(81) << "---------------------------\n" << endl;
-    cout << setw(10) << "-> Allowed people are from 1 to 5 : " << endl;
-    cout << setw(10) << "-----------------------------------"<<endl;
     
-    while(l_c == 1){
-    cout << "\n--> How many people are you : ";
-    cin >> p;
+    box();
     
-    if(p>5 || p<=0){
-    	
-    	cout<<"\n------------------"<<endl;
-    	cout<<"| Again enter... |"<<endl;
-    	cout<<"------------------"<<endl;
-    	
-    	cout << setw(10) << "\n-> Allowed people are from 1 to 5" << endl;
-    	
-	}else {
-		break;
-	}
-}
-    int people[p];
-    for (int i = 0; i < p; i++) {
-        people[i] = i + 1;
-    }
-
-    menu(people, p);
-
-    cout << "\n" << setw(80) << "---------------------" << endl;
-    cout << setw(80) << "| AREA FOR VISITING |" << endl;
-    cout << setw(81) << "---------------------\n" << endl;
-
-    while (w_choice == 1) {
-        cout << "\n --> Which area in which you want to enter : \n --> 1- ZOO .\n --> 2- Rides Joy land.\n --> 3- Haunted house. \n -> Enter your answer... ";
-        cin >> choice;
-
-        if (choice == 1) {
-        	
-            money -= 500; 
-			zoo(p);
-        } else if (choice == 2) {
-            ride();
-        } else if (choice == 3) {
-            haunted_house();
-        } else {
-            cout << "Invalid!!! , Enter again... " << endl;
-        }
-    }
+//    cout << setw(10) << "-> Allowed people are from 1 to 5 : " << endl;
+//    cout << setw(10) << "-----------------------------------"<<endl;
+//    
+//    while(l_c == 1){
+//    cout << "\n--> How many people are you : ";
+//    cin >> p;
+//    
+//    if(p>5 || p<=0){
+//    	
+//    	cout<<"\n------------------"<<endl;
+//    	cout<<"| Again enter... |"<<endl;
+//    	cout<<"------------------"<<endl;
+//    	
+//    	cout << setw(10) << "\n-> Allowed people are from 1 to 5" << endl;
+//    	
+//	}else {
+//		break;
+//	}
+//}
+//    int people[p];
+//    for (int i = 0; i < p; i++) {
+//        people[i] = i + 1;
+//    }
+//
+//    menu(people, p);
+//
+//    cout << "\n" << setw(80) << "---------------------" << endl;
+//    cout << setw(80) << "| AREA FOR VISITING |" << endl;
+//    cout << setw(81) << "---------------------\n" << endl;
+//
+//    while (w_choice == 1) {
+//        cout << "\n --> Which area in which you want to enter : \n --> 1- ZOO .\n --> 2- Rides Joy land.\n --> 3- Haunted house. \n -> Enter your answer... ";
+//        cin >> choice;
+//
+//        if (choice == 1) {
+//        	
+//            money -= 500; 
+//			zoo(p);
+//        } else if (choice == 2) {
+//            ride();
+//        } else if (choice == 3) {
+//            haunted_house();
+//        } else {
+//            cout << "Invalid!!! , Enter again... " << endl;
+//        }
+//    }
 
     return 0;
 }
