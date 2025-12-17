@@ -11,32 +11,32 @@ int money = 5000;
 
 void box(){
 	
-	cout<<"\t\t\t========================================================================="<<endl;
-	cout<<"\t\t\t|| "<<setw(70)<<" ||"<<endl;
-	cout<<"\t\t\t|| "<<setw(63)<<"__________________"<<setw(7)<<" ||"<<endl;
-	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(5)<<"____"<<setw(5)<<"____"<<setw(5)<<"____"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(46)<<" |"<<setw(5)<<"___|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(44)<<"______________________"<<setw(2)<<" |"<<setw(2)<<"|"<<setw(5)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(23)<<"|"<<setw(4)<<"____"<<setw(4)<<"___"<<setw(5)<<"____"<<setw(6)<<"___"<<setw(2)<<"|"<<" |"<<setw(5)<<"|__|"<<setw(5)<<"|__|"<<setw(5)<<"|__|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(23)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(4)<<"\\"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(2)<<"|"<<setw(17)<<"|"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(23)<<"|"<<setw(1)<<"|__/"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(5)<<"|__"<<setw(2)<<"|"<<" ------------------"<<setw(7)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(22)<<"__________________ "<<"|"<<setw(1)<<"|"<<setw(3)<<"\\"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(26)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(4)<<"|"<<setw(17)<<"|"<<setw(2)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(7)<<"|___|"<<setw(5)<<"|__"<<setw(2)<<"|"<<setw(26)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(4)<<"|"<<setw(17)<<"|"<<" |"<<setw(8)<<"---"<<setw(13)<<"|"<<setw(26)<<"||"<<endl;
-	cout<<"\t\t\t|| "<<setw(4)<<"|"<<setw(17)<<"|"<<" |____________________|"<<setw(26)<<"||"<<endl;
+	cout<<"\t\t================================================================================="<<endl;
+	
+	cout<<"\t\t|| "<<setw(78)<<" ||"<<endl;
+	cout<<"\t\t|| "<<setw(71)<<"__________________"<<setw(7)<<" ||"<<endl;
+	cout<<"\t\t|| "<<setw(54)<<" |"<<setw(5)<<"____"<<setw(5)<<"____"<<setw(5)<<"____"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(54)<<" |"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t--- "<<setw(53)<<" |"<<setw(5)<<"___|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t___ "<<setw(51)<<"______________________"<<setw(2)<<" |"<<setw(2)<<"|"<<setw(5)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(31)<<"|"<<setw(4)<<"____"<<setw(4)<<"___"<<setw(5)<<"____"<<setw(6)<<"___"<<setw(2)<<"|"<<" |"<<setw(5)<<"|__|"<<setw(5)<<"|__|"<<setw(5)<<"|__|"<<setw(2)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(31)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(4)<<"\\"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(2)<<"|"<<setw(17)<<"|"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(31)<<"|"<<setw(1)<<"|__/"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(5)<<"|__"<<setw(2)<<"|"<<" ------------------"<<setw(7)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(29)<<"_____________________________ "<<"|"<<"|"<<setw(3)<<"\\"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(3)<<"|"<<setw(4)<<"|"<<setw(26)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"|"<<setw(9)<<"____"<<setw(12)<<"____"<<setw(5)<<"____"<<setw(2)<<"|"<<setw(2)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(7)<<"|___/"<<setw(5)<<"|__"<<setw(2)<<"|"<<setw(26)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<" |"<<setw(5)<<"|"<<" |"<<setw(8)<<"---"<<setw(13)<<"|"<<setw(26)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"|"<<setw(1)<<"|__|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(6)<<"|___"<<setw(5)<<"|___"<<setw(2)<<"|"<<" ----------------------"<<setw(26)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(2)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(3)<<"|"<<setw(6)<<"|"<<" |"<<setw(5)<<"|"<<setw(49)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"|"<<setw(1)<<"|"<<setw(3)<<"|"<<setw(5)<<"|__|"<<setw(12)<<"|__|_ |__|"<<setw(5)<<"|___"<<setw(2)<<"|"<<setw(49)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"|"<<setw(28)<<"|"<<setw(49)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(1)<<"-----------------------------"<<setw(49)<<"||"<<endl;
+	cout<<"\t\t|| "<<setw(78)<<" ||"<<endl;
 
-
-
-	cout<<"\t\t\t========================================================================="<<endl;
+	cout<<"\t\t===========================================================|"<<setw(21)<<"|==============="<<endl;
+	cout<<endl;
 }
 
-
-
-
-
-
-void menu(int people[], int p) {
+void menu(int people[], int *p) {
     int age = 0;
 
     cout << "\n" << setw(75) << "----------------" << endl;
@@ -65,10 +65,10 @@ void menu(int people[], int p) {
 
     cout << setw(57) << "--------------" << endl;
     cout << "For age 41 to onward :" << setw(35) << "| Price: 500 |" << endl;
-    cout << "---------------" << setw(42) << "--------------" << endl;
+    cout << "--------------------" << setw(37) << "--------------" << endl;
 
-    for (int i = 0; i < p; i++) {
-        cout << "--> Enter the age of " << i + 1 << " person: ";
+    for (int i = 0; i < *p; i++) {
+        cout << "\n--> Enter the age of " << i + 1 << " person: ";
         cin >> age;
 
         if (age >= 1 && age <= 10) {
@@ -85,8 +85,11 @@ void menu(int people[], int p) {
             money -= 500;
         }
     }
-
-    cout << "--> Total money left is : " << money << endl;
+    
+    cout<<"\n________________________________"<<endl;
+    cout << "--> Total money left is : " << money <<" |"<< endl;
+    cout<<"--------------------------------"<<endl;
+    
 }
 
 void zoo(int people) {
@@ -168,11 +171,21 @@ void zoo(int people) {
         Sleep(50);
     }
 
-    cout << "\n\nDo you want to ride in Elephant : \n--> Press y or 'Y' - for YES. \n--> Press n or 'N' - for NO. \n-> Enter you answer ... ";
+    cout << "\n\n--> Do you want to ride in Elephant : "<<endl;
+    cout<<"-------------------------------------"<<endl;
+    cout<<"------------------------------"<<endl;
+    cout<<"| Press y or Y - For \"YES\" : | "<<endl;
+    cout<<"------------------------------"<<endl;
+    cout<<"-----------------------------"<<endl;
+    cout<<"| Press n or N - For \"NO\" : | "<<endl;
+    cout<<"-----------------------------"<<endl;
+    cout<<"\n--> Enter your answer... ";
     cin >> r_zoo;
 
     if (r_zoo == 'y' || r_zoo == 'Y') {
+    	cout<<"________________________________"<<endl;
         cout << "\n| Price of per Ride is --> 150 |" << endl;
+        cout<<"--------------------------------"<<endl;
 
         while (r_e_zoo == 1) {
             cout << "\nHow many of you want the ride : ";
@@ -183,16 +196,20 @@ void zoo(int people) {
                 r_e_zoo++;
             } else {
                 cout << "\nYou are entering wrong people!!!" << endl;
-                cout << "--> Enter again : " << endl;
+                cout << "\n--> Enter again : " << endl;
+                cout<<"-------------------"<<endl;
             }
         }
-
+        
+        cout<<endl;
         for (int i = 0; i < r_elephant.length(); i++) {
             cout << r_elephant[i];
             Sleep(70);
         }
     } else {
-        cout << "Total amount you left is : " << money << endl;
+    	cout<<"------------------------------"<<endl;
+        cout << "| Total amount you left is : |" << money << endl;
+        cout<<"------------------------------"<<endl;
     }
 
     cout << "\n" << setw(80) << "----------------------------------" << endl;
@@ -205,19 +222,28 @@ struct v_ride {
     int ride_price[4] = {150, 100, 100, 200};
 };
 
-void ride() {
+void ride(int people) {
     v_ride r[4];
     char l_ride = 'y';
-    int p_ride, c_ride;
+    int p_ride = 0, c_ride , dummy = 1;
 
     cout << "\n" << setw(68) << "---------" << endl;
     cout << setw(68) << "| RIDES |" << endl;
     cout << setw(69) << "---------\n" << endl;
 
-    cout << "Do you want to take rides : \n --> Press y or Y - For YES .\n --> Press n or N - For NO . \n-> Enter your answer... ";
+    cout << "--> Do you want to take rides : "<<endl;
+    cout<<"---------------------------------"<<endl;
+    cout<<"------------------------------"<<endl;
+    cout<<"| Press y or Y - For \"YES\" : | "<<endl;
+    cout<<"------------------------------"<<endl;
+    cout<<"-----------------------------"<<endl;
+    cout<<"| Press n or N - For \"NO\" : | "<<endl;
+    cout<<"-----------------------------"<<endl;
+    cout<<"\nEnter your answer... ";
     cin >> l_ride;
     cout << endl;
-
+    
+    while(dummy == 1){
     if (l_ride == 'y' || l_ride == 'Y') {
         cout << setw(5) << "-----------------------------------------------------" << endl;
         for (int i = 0; i < 4; i++) {
@@ -228,31 +254,74 @@ void ride() {
 
         while (l_ride == 'y' || l_ride == 'Y') {
             if (money >= 100) {
+            	int p_q = 1;
+            	while(p_q == 1){
+            		if(p_ride == 0){
                 cout << "\n--> How many of you want the ride : ";
                 cin >> p_ride;
-
-                cout << "\nWhich ride do you want : ";
+            }
+                if(p_ride>0 && p_ride <= people ){
+                cout << "\n--> Which ride do you want : ";
                 cin >> c_ride;
 
                 money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
-                cout << money << endl;
-
-                cout << "\n\n-->Do you want to take another ride : \n--> Press y or Y - For Yes .\n--> Press n or N - For  No . \n-> Enter your answer...";
-                cin >> l_ride;
-            } else {
+                p_q ++;
+            }else{
+            	cout << "\n-----------" << endl;
+                cout << "| Notice: |" << endl;
+                cout << "-----------" << endl;
+            	cout<<"\nYou are entering wrong people : "<<endl;
+            	cout<<"-------------------------------"<<endl;
+            	cout<<"\nAgain enter: "<<endl;
+            	cout<<"------------"<<endl;
+            	cout << "\n--> How many of you want the ride : ";
+                cin >> p_ride;
+			}
+			}
+            }else {
                 cout << "Insufficiant amount!!!" << endl;
+                l_ride = 'n';
                 break;
             }
-        }
-    } else {
+             if(l_ride == 'y' || l_ride == 'Y'){
+			cout << "\n\n-->Do you want to take another ride : "<<endl;
+			cout<<"------------------------------"<<endl;
+            cout<<"| Press y or Y - For \"YES\" : | "<<endl;
+            cout<<"------------------------------"<<endl;
+            cout<<"-----------------------------"<<endl;
+            cout<<"| Press n or N - For \"NO\" : | "<<endl;
+            cout<<"-----------------------------"<<endl;
+            cout<<"\nEnter your answer ... ";
+            cin >> l_ride;
+            if(l_ride == 'y' || l_ride == 'Y'){
+            	p_ride = 0;
+			}
+            }else{
+            	l_ride = 'n';
+			}
+		}
+		dummy++;
+        }else {
         cout << "-----------" << endl;
         cout << "| Notice: |" << endl;
         cout << "-----------" << endl;
 
-        cout << "Your atleast 1 member should take  the any ride : " << endl;
-        cout << "__________________________________________________" << endl;
+        cout << "\nYour atleast 1 member should take  the any ride : " << endl;
+        cout << "-------------------------------------------------" << endl;
+        cout << "\n--> How many of you want the ride : ";
+        cin >> p_ride;
+        l_ride = 'y';
     }
 }
+
+    cout<<"------------------------------"<<endl;
+    cout << "| Total amount you left is : |" << money << endl;
+    cout<<"------------------------------"<<endl;
+    cout << "\n" << setw(80) << "--------------------------------------" << endl;
+    cout << setw(80) << "| THANK YOU FOR VISITING THE JOYLAND |" << endl;
+    cout << setw(81) << "--------------------------------------\n" << endl;
+    
+} 
 
 struct haunted {
     string name[4] = {"Alliens", "Skeletons", "Demogorgans", "Zombies"};
@@ -537,52 +606,69 @@ int main(){
     
     box();
     
-//    cout << setw(10) << "-> Allowed people are from 1 to 5 : " << endl;
-//    cout << setw(10) << "-----------------------------------"<<endl;
-//    
-//    while(l_c == 1){
-//    cout << "\n--> How many people are you : ";
-//    cin >> p;
-//    
-//    if(p>5 || p<=0){
-//    	
-//    	cout<<"\n------------------"<<endl;
-//    	cout<<"| Again enter... |"<<endl;
-//    	cout<<"------------------"<<endl;
-//    	
-//    	cout << setw(10) << "\n-> Allowed people are from 1 to 5" << endl;
-//    	
-//	}else {
-//		break;
-//	}
-//}
-//    int people[p];
-//    for (int i = 0; i < p; i++) {
-//        people[i] = i + 1;
-//    }
-//
-//    menu(people, p);
-//
-//    cout << "\n" << setw(80) << "---------------------" << endl;
-//    cout << setw(80) << "| AREA FOR VISITING |" << endl;
-//    cout << setw(81) << "---------------------\n" << endl;
-//
-//    while (w_choice == 1) {
-//        cout << "\n --> Which area in which you want to enter : \n --> 1- ZOO .\n --> 2- Rides Joy land.\n --> 3- Haunted house. \n -> Enter your answer... ";
-//        cin >> choice;
-//
-//        if (choice == 1) {
-//        	
-//            money -= 500; 
-//			zoo(p);
-//        } else if (choice == 2) {
-//            ride();
-//        } else if (choice == 3) {
-//            haunted_house();
-//        } else {
-//            cout << "Invalid!!! , Enter again... " << endl;
-//        }
-//    }
+    cout << setw(10) << "-> Allowed people are from 1 to 5 : " << endl;
+    cout<<setw(10) << "-----------------------------------"<<endl;
+    
+    
+    while(l_c == 1){
+    cout << "\n--> How many people are you : ";
+      cin >> p;
+      cout << setw(10) << "-----------------------------------"<<endl;
+      int *ptr_p = &p;
+      
+
+    if(*ptr_p >5 || *ptr_p<=0){
+    	
+    	cout<<"\n------------------"<<endl;
+    	cout<<"| Again enter... |"<<endl;
+    	cout<<"------------------"<<endl;
+    	
+    	cout << setw(10) << "\n-> Allowed people are from 1 to 5" << endl;
+    	
+    
+    	
+	} else {
+		int people[p];
+    for (int i = 0; i < p; i++) {
+        people[i] = i + 1;
+    }
+
+    menu(people, ptr_p);
+		l_c++;
+	}
+}
+    
+    cout << "\n" << setw(80) << "---------------------" << endl;
+    cout << setw(80) << "| AREA FOR VISITING |" << endl;
+    cout << setw(81) << "---------------------\n" << endl;
+
+    while (w_choice == 1) {
+        cout << "\n --> Which area in which you want to enter : "<<endl;
+        cout<<"---------------------------------------------"<<endl;
+        cout<<"\t___________"<<endl;
+        cout<<"\t| 1- ZOO: |"<<endl;
+        cout<<"\t-----------"<<endl;
+        cout<<"\t_______________________"<<endl;
+        cout<<"\t| 2- RIDES [JOYLAND]: |"<<endl;
+        cout<<"\t-----------------------"<<endl;
+        cout<<"\t_____________________"<<endl;
+        cout<<"\t| 3- HAUNTED HOUSE: |"<<endl;
+        cout<<"\t---------------------"<<endl;
+        cout<<"\n--> Enter your answer... ";
+        cin >> choice;
+
+        if (choice == 1) {
+        	
+            money -= 500; 
+			zoo(p);
+        } else if (choice == 2) {
+            ride(p);
+        } else if (choice == 3) {
+            haunted_house();
+        } else {
+            cout << "Invalid!!! , Enter again... " << endl;
+        }
+    }
 
     return 0;
 }
