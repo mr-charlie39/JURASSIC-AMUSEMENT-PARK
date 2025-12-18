@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int money = 5000;
+int money = 500;
 
 
 void box(){
@@ -210,7 +210,7 @@ void zoo(int people) {
         }
     } else {
     	cout<<"------------------------------"<<endl;
-        cout << "| Total amount you left is : |" << money << endl;
+        cout << "| Total amount you left is : " << money <<" |"<< endl;
         cout<<"------------------------------"<<endl;
     }
 
@@ -265,8 +265,43 @@ void ride(int people) {
                 if(p_ride>0 && p_ride <= people ){
                 cout << "\n--> Which ride do you want : ";
                 cin >> c_ride;
-
+                if(c_ride == 1){
+                	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
                 money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
+            }else{
+            	cout<<"_______________________"<<endl;
+            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
+            	cout<<"-----------------------"<<endl;
+			}
+            }else if(c_ride == 2){
+                	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
+                money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
+            }else{
+            	cout<<"_______________________"<<endl;
+            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
+            	cout<<"-----------------------"<<endl;
+			}
+            }else if(c_ride == 3){
+                	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
+                money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
+            }else{
+            	cout<<"_______________________"<<endl;
+            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
+            	cout<<"-----------------------"<<endl;
+			}
+            }else if(c_ride == 5){
+                	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
+                money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
+            }else{
+            	cout<<"_______________________"<<endl;
+            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
+            	cout<<"-----------------------"<<endl;
+			}
+            }else {
+            	cout<<"| INVALID INPUT |"<<endl;
+            	cout<<"--> Again enter ... "<<endl;
+            	p_q--;
+			}
                 p_q ++;
             }else{
             	cout << "\n-----------" << endl;
@@ -281,7 +316,13 @@ void ride(int people) {
 			}
 			}
             }else {
-                cout << "Insufficiant amount!!!" << endl;
+				string message = "| SORRY INSUFFUICIENT AMOUNT |";
+				cout<<"______________________________"<<endl;
+                for(int i  = 0 ; i < message.length() ; i++){
+                	cout<<message[i];
+                	Sleep(100);
+				}
+				cout<<"\n------------------------------"<<endl;
                 l_ride = 'n';
                 break;
             }
@@ -317,7 +358,7 @@ void ride(int people) {
 }
 
     cout<<"------------------------------"<<endl;
-    cout << "| Total amount you left is : |" << money << endl;
+    cout << "| Total amount you left is : " << money <<" |"<< endl;
     cout<<"------------------------------"<<endl;
     cout << "\n" << setw(80) << "--------------------------------------" << endl;
     cout << setw(80) << "| THANK YOU FOR VISITING THE JOYLAND |" << endl;
@@ -673,6 +714,10 @@ void haunted_house() {
 	quiz_l++;
 }
 }
+
+        cout<<"------------------------------"<<endl;
+        cout << "| Total amount you left is : " << money <<" |"<< endl;
+        cout<<"------------------------------"<<endl;
 	
 }
 
