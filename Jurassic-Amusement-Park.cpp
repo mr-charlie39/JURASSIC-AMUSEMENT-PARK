@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int money = 500;
+int money = 5000;
 
 
 void box(){
@@ -673,6 +673,7 @@ void haunted_house() {
 			cout<<"| Congratulation!!! . You Won !!! |"<<endl;
 			cout<<"-----------------------------------"<<endl;
 			money += 50;
+			break;
 		}else{
 			cout<<"---------------"<<endl;
 			cout<<"| You lose!!! |"<<endl;
@@ -715,9 +716,9 @@ void haunted_house() {
 }
 }
 
-        cout<<"------------------------------"<<endl;
+        cout<<"-----------------------------------"<<endl;
         cout << "| Total amount you left is : " << money <<" |"<< endl;
-        cout<<"------------------------------"<<endl;
+        cout<<"-----------------------------------"<<endl;
 	
 }
 
@@ -812,7 +813,7 @@ int main(){
 		}
         }else if(choice == 4){
         	
-        	string message = "| THANK YOU SO MUCH FOR CHOOSING: |";
+        	string message = "| THANK YOU SO MUCH FOR VISITING: |";
         	cout<<"___________________________________"<<endl;
         	for(int i = 0 ; i < message.length() ; i++){
         		cout<<message[i];
@@ -824,6 +825,5 @@ int main(){
             cout << "Invalid!!! , Enter again... " << endl;
         }
     }
-
-    return 0;
+    return 0; 
 }
