@@ -3,6 +3,8 @@
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -324,17 +326,23 @@ void ride(int people) {
 } 
 
 struct haunted {
-    string name[4] = {"Alliens", "Skeletons", "Demogorgans", "Zombies"};
     int index;
     int name_index[4] = {1,2,3,4};
 };
-
+void clearPortion(int length) {
+    for (int i = 0; i < length; i++)
+        cout << "\b \b";
+}
 void haunted_house() {
+	string name[4][2] ;
+	string name1[4] = {"Alliens", "Skeletons", "Demogorgans", "Zombies"};
+	string index1[4];
 	int c_zombies = 0 , c_allien = 0 , c_skeleton = 0 , c_demogorgans = 0 , choice_haunted = 0;
     haunted h[4];
     bool repeat;
     int index_c[4] , choice= 0 , w_l_house = 1 , l_house_quiz = 0 , quiz_l = 1 , l_check = 1;
-    
+	stringstream ss;
+	
     //Backend:
     srand(time(0));
 
@@ -342,7 +350,6 @@ void haunted_house() {
         do {
             repeat = false;
             h[i].index = rand() % 4 + 1;
-
             for (int j = 0; j < i; j++) {
                 if (h[i].index == h[j].index) {
                     repeat = true;
@@ -351,12 +358,42 @@ void haunted_house() {
             }
         } while (repeat);
     }
-
     
+   for(int i = 0 ; i < 4 ; i++){
+   	name[i][0] = name1[i];
+   }
+   
+   
+   for(int i = 0 ; i < 4 ; i++){
+   	ss.str("");
+   	ss.clear();
+   	
+   	ss << h[i].index;
+   	name[i][1] = ss.str();
+   }    
+   
+   cout<<"<========== Quick See this : ==========>"<<endl;
+    cout<<"---------------\t\t"<<"------------"<<endl;
+    cout<<"| Characters: |\t\t"<<"| Position |"<<endl;
+    cout<<"---------------\t\t"<<"------------\n"<<endl;
+    
+   for(int i = 0 ; i < 4; i++){
+	for(int j = 0 ; j < 2 ; j++){
+	cout<<" "<<name[i][j]<<"\t \t ";	
+	}	
+	cout<<endl;
+	
+	}
+	
+	Sleep(2500);
+	
+	for (int i = 0; i < 9; i++) {
+        cout << "\x1b[A";
+    }
 
-    cout << "\n Array elements (no repetition): ";
     for (int i = 0; i < 4; i++) {
-        cout << h[i].index << " ";
+        cout << "\r                                               \r";
+        if (i < 3) cout << endl;
     }
     
     //Frontend:
@@ -378,7 +415,7 @@ void haunted_house() {
     
     for(int i  = 0 ; i < 4; i++){
     	
-    	cout<<i+1<<" - "<<h[i].name[i]<<"\t\t\t";
+    	cout<<i+1<<" - "<<name[i][0]<<"\t\t\t";
     	
     	cin>>choice;
     	
@@ -441,19 +478,6 @@ void haunted_house() {
 	cout<<"<=== Wellcome you entered in the | Haunted House | ===>"<<endl;
 	cout<<setw(50)<<"-----------------"<<endl;
 	
-	cout<<"================== 2D Array: ===================="<<endl;
-	
-	for(int i = 0 ; i < 4 ; i++){
-		if(i == 0){
-			h[i].name[i] = "Alliens";
-		}else if(i == 1){
-			h[i].name[i] = "Skeletons";
-		}else if(i == 2){
-			h[i].name[i] = "Demogorgans";
-		}else if(i == 3){
-			h[i].name[i] = "Zombies";
-		}
-	}
 	
 	int e_haunted[4];
 	srand(time(0));
@@ -481,40 +505,51 @@ void haunted_house() {
     for (int i = 0; i < 4; i++) {
         cout << e_haunted[i] << " ";
     }
-	money = 100;
 	
 	while(quiz_l == 1){
 		
-		
-		cout<<money;
-		
-		
 		if(money >= 50){
-		
-	cout<<"\nPress 1 - For "<<h[0].name[0]<<endl;
-	cout<<"Press 2 - For "<<h[1].name[1]<<endl;
-	cout<<"Press 3 - For "<<h[2].name[2]<<endl;
-	cout<<"Press 4 - For "<<h[3].name[3]<<endl;
-	cout<<"Press 5 - For Exit"<<endl;
+	cout<<"\n-------------------------"<<endl;
+	cout<<"| Press 1 - For "<<name[0][0]<<" |"<<endl;
+	cout<<"-------------------------"<<endl;
+	cout<<"---------------------------"<<endl;
+	cout<<"| Press 2 - For "<<name[1][0]<<" |"<<endl;
+	cout<<"---------------------------"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cout<<"| Press 3 - For "<<name[2][0]<<" |"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cout<<"-------------------------"<<endl;
+	cout<<"| Press 4 - For "<<name[3][0]<<" |"<<endl;
+	cout<<"-------------------------"<<endl;
+	cout<<"-----------------------"<<endl;
+	cout<<"| Press 5 - For Exit "<<" |"<<endl;
+	cout<<"-----------------------"<<endl;
 	
-	cout<<"Enter your answer ... ";
+	cout<<"\n--> Enter your answer ... ";
 	cin>>choice_haunted;
 	
 	
 	if(choice_haunted == 1){
 		
 		for(int i = 0 ; i < 3 ; i++){
-		cout<<i+1<<" Chance: "<<endl;
+		cout<<"-------------"<<endl;
+		cout<<"| "<<i+1<<" Chance: |"<<endl;
+		cout<<"-------------"<<endl;
 		
-		cout<<"How many Alliens are thier : ";
+		cout<<"--> How many Alliens are thier : ";
 		cin>>c_allien;
 		
 		if(c_allien == e_haunted[0]){
-			cout<<"Congratulation!!! . You Won !!!"<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"| Congratulation!!! . You Won !!! |"<<endl;
+			cout<<"-----------------------------------"<<endl;
 			money += 50;
 			break;
 		}else{
-			cout<<"You lose!!!"<<endl;
+			cout<<"---------------"<<endl;
+			cout<<"| You lose!!! |"<<endl;
+			cout<<"---------------"<<endl;
+			
 			cal = (c_allien - e_haunted[0])*10;
 			
 			if(cal < 0 ){
@@ -524,22 +559,31 @@ void haunted_house() {
 			money -= cal;
 		}
 	}
-		
-		cout<<"Again enter: "<<endl;
+		cout<<"---------------------------------"<<endl;
+		cout<<"| IF YOU WANT TO AGAIN CHOICE : |"<<endl;
+		cout<<"---------------------------------"<<endl;
 		
 	}else if(choice_haunted == 2){
 		
 		for(int i = 0 ; i < 3 ; i++){
+			cout<<"-------------"<<endl;
+		cout<<"| "<<i+1<<" Chance: |"<<endl;
+		cout<<"-------------"<<endl;
 		
-		cout<<"How many Skeletons are thier : ";
+		cout<<"-- > How many Skeletons are thier : ";
 		cin>>c_skeleton;
 		
 			if(c_skeleton == e_haunted[1]){
-			cout<<"Congratulation!!! . You Won !!!"<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"| Congratulation!!! . You Won !!! |"<<endl;
+			cout<<"-----------------------------------"<<endl;
 			money += 50;
 			break;
 		}else{
-			cout<<"You lose!!!"<<endl;
+			cout<<"---------------"<<endl;
+			cout<<"| You lose!!! |"<<endl;
+			cout<<"---------------"<<endl;
+			
 			cal = (c_skeleton - e_haunted[1])*10;
 			
 			if(cal < 0 ){
@@ -549,28 +593,50 @@ void haunted_house() {
 			money -= cal;
 		}
 		
-		cout<<"Again enter: "<<endl;
+		cout<<"---------------------------------"<<endl;
+		cout<<"| IF YOU WANT TO AGAIN CHOICE : |"<<endl;
+		cout<<"---------------------------------"<<endl;
 		
 }
 	}else if(choice_haunted == 3){
 		
-		cout<<"You Won!!! : "<<endl;
-		cout<<"Take your price 50-Rs."<<endl;
+		cout<<"-----------------------------------"<<endl;
+			cout<<"| Congratulation!!! . You Won !!! |"<<endl;
+			cout<<"-----------------------------------"<<endl;
+			
+			string price  = "| --> Take your price 50-Rs. |";
+			
+		cout<<"\n------------------------------"<<endl;
+		for(int i = 0; i < price.length() ; i++){
+			cout<<price[i];
+			Sleep(100);
+		}
+		cout<<"------------------------------"<<endl;
 		
-		cout<<"Again enter: "<<endl;
+		cout<<"----------------------------------"<<endl;
+		cout<<"| IF YOU WANT TO AGAIN CHOICE : |"<<endl;
+		cout<<"----------------------------------"<<endl;
 		
 	}else if(choice_haunted == 4){
 		
 		for(int i = 0 ; i < 3 ; i++){
+			cout<<"-------------"<<endl;
+		cout<<"| "<<i+1<<" Chance: |"<<endl;
+		cout<<"-------------"<<endl;
 		
-		cout<<"How many Zombies are their : ";
+		cout<<"--> How many Zombies are their : ";
 		cin>>c_zombies;
 		
 		if(c_zombies == e_haunted[3]){
-			cout<<"Congratulation!!! . You Won !!!"<<endl;
+			cout<<"-----------------------------------"<<endl;
+			cout<<"| Congratulation!!! . You Won !!! |"<<endl;
+			cout<<"-----------------------------------"<<endl;
 			money += 50;
 		}else{
-			cout<<"You lose!!!"<<endl;
+			cout<<"---------------"<<endl;
+			cout<<"| You lose!!! |"<<endl;
+			cout<<"---------------"<<endl;
+			
 			cal = (c_zombies - e_haunted[3])*10;
 			
 			if(cal < 0 ){
@@ -580,16 +646,30 @@ void haunted_house() {
 			money -= cal;
 		}
 		
-		cout<<"Again enter: "<<endl;
+		cout<<"---------------------------------"<<endl;
+		cout<<"| IF YOU WANT TO AGAIN CHOICE : |"<<endl;
+		cout<<"---------------------------------"<<endl;
 		
 	}
 }else if(choice_haunted == 5){
-	cout<<"Leaving Haunted House: "<<endl;
+	cout<<"------------------------------"<<endl;
+	string leave = "| --> Leaving Haunted House: |";
+	for(int i = 0 ; i < leave.length() ; i++){
+		cout<<leave[i];
+		Sleep(100);
+	}
+	cout<<"\n------------------------------"<<endl;
 		quiz_l++;
 	}
 	
 }else{
-	cout<<"You Don't have enough amount !!!"<<endl;
+	cout << "\n-----------" << endl;
+    cout << "| Notice: |" << endl;
+    cout << "-----------" << endl;
+    cout<<"------------------------------------"<<endl;
+	cout<<"| You Don't have enough amount !!! |"<<endl;
+	cout<<"------------------------------------"<<endl;
+	
 	quiz_l++;
 }
 }
@@ -654,18 +734,48 @@ int main(){
         cout<<"\t_____________________"<<endl;
         cout<<"\t| 3- HAUNTED HOUSE: |"<<endl;
         cout<<"\t---------------------"<<endl;
+        cout<<"\t____________"<<endl;
+        cout<<"\t| 4- EXIT: |"<<endl;
+        cout<<"\t------------"<<endl;
         cout<<"\n--> Enter your answer... ";
         cin >> choice;
 
         if (choice == 1) {
-        	
+        	if(money >= 500){
             money -= 500; 
 			zoo(p);
+		}else{
+			cout<<"\n---------------------------"<<endl;
+			cout<<"| Insufficient amount !!! |"<<endl;
+			cout<<"---------------------------"<<endl;
+		}
         } else if (choice == 2) {
+        	if(money >= 100){
             ride(p);
+        }else{
+        	cout<<"\n---------------------------"<<endl;
+			cout<<"| Insufficient amount !!! |"<<endl;
+			cout<<"---------------------------"<<endl;
+		}
         } else if (choice == 3) {
+        	if(money >= 250){
             haunted_house();
-        } else {
+        }else{
+        	cout<<"\n---------------------------"<<endl;
+			cout<<"| Insufficient amount !!! |"<<endl;
+			cout<<"---------------------------"<<endl;
+		}
+        }else if(choice == 4){
+        	
+        	string message = "| THANK YOU SO MUCH FOR CHOOSING: |";
+        	cout<<"___________________________________"<<endl;
+        	for(int i = 0 ; i < message.length() ; i++){
+        		cout<<message[i];
+        		Sleep(100);
+			}
+        	cout<<"\n-----------------------------------"<<endl;
+        	return 0 ;
+		} else {
             cout << "Invalid!!! , Enter again... " << endl;
         }
     }
