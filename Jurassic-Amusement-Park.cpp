@@ -375,6 +375,7 @@ void clearPortion(int length) {
         cout << "\b \b";
 }
 void haunted_house() {
+	int a_allien = 0  , a_skeleton = 0 ,a_zombies = 0 , a_demogorgans = 0;
 	string name[4][2] ;
 	string name1[4] = {"Alliens", "Skeletons", "Demogorgans", "Zombies"};
 	string index1[4];
@@ -426,7 +427,7 @@ void haunted_house() {
 	
 	}
 	
-	Sleep(2500);
+	Sleep(1800);
 	
 	for (int i = 0; i < 9; i++) {
         cout << "\x1b[A";
@@ -541,11 +542,6 @@ void haunted_house() {
     
 
     int cal = 0;
-
-    cout << "\n Array elements (no repetition): ";
-    for (int i = 0; i < 4; i++) {
-        cout << e_haunted[i] << " ";
-    }
 	
 	while(quiz_l == 1){
 		
@@ -571,7 +567,7 @@ void haunted_house() {
 	
 	
 	if(choice_haunted == 1){
-		
+		if(a_allien == 0){
 		for(int i = 0 ; i < 3 ; i++){
 		cout<<"-------------"<<endl;
 		cout<<"| "<<i+1<<" Chance: |"<<endl;
@@ -600,11 +596,18 @@ void haunted_house() {
 			money -= cal;
 		}
 	}
+	a_allien++;
+}else{
+	cout<<"__________________________________________"<<endl;
+	cout<<"| You have Already Visited this area.... |"<<endl;
+	cout<<"------------------------------------------"<<endl;
+}
 		cout<<"---------------------------------"<<endl;
 		cout<<"| IF YOU WANT TO AGAIN CHOICE : |"<<endl;
 		cout<<"---------------------------------"<<endl;
 		
 	}else if(choice_haunted == 2){
+		if(a_skeleton == 0){
 		
 		for(int i = 0 ; i < 3 ; i++){
 			cout<<"-------------"<<endl;
@@ -639,8 +642,14 @@ void haunted_house() {
 		cout<<"---------------------------------"<<endl;
 		
 }
+     a_skeleton++;
+}else{
+	cout<<"__________________________________________"<<endl;
+	cout<<"| You have Already Visited this area.... |"<<endl;
+	cout<<"------------------------------------------"<<endl;
+}
 	}else if(choice_haunted == 3){
-		
+		if(a_demogorgans == 0){
 		cout<<"-----------------------------------"<<endl;
 			cout<<"| Congratulation!!! . You Won !!! |"<<endl;
 			cout<<"-----------------------------------"<<endl;
@@ -652,14 +661,19 @@ void haunted_house() {
 			cout<<price[i];
 			Sleep(100);
 		}
-		cout<<"------------------------------"<<endl;
+		cout<<"\n------------------------------"<<endl;
 		
-		cout<<"----------------------------------"<<endl;
+		cout<<"\n----------------------------------"<<endl;
 		cout<<"| IF YOU WANT TO AGAIN CHOICE : |"<<endl;
 		cout<<"----------------------------------"<<endl;
-		
+		a_demogorgans++;
+}else{
+	cout<<"__________________________________________"<<endl;
+	cout<<"| You have Already Visited this area.... |"<<endl;
+	cout<<"------------------------------------------"<<endl;
+}
 	}else if(choice_haunted == 4){
-		
+		if(a_zombies == 0){
 		for(int i = 0 ; i < 3 ; i++){
 			cout<<"-------------"<<endl;
 		cout<<"| "<<i+1<<" Chance: |"<<endl;
@@ -693,6 +707,12 @@ void haunted_house() {
 		cout<<"---------------------------------"<<endl;
 		
 	}
+	a_zombies++;
+}else{
+	cout<<"__________________________________________"<<endl;
+	cout<<"| You have Already Visited this area.... |"<<endl;
+	cout<<"------------------------------------------"<<endl;
+}
 }else if(choice_haunted == 5){
 	cout<<"------------------------------"<<endl;
 	string leave = "| --> Leaving Haunted House: |";
