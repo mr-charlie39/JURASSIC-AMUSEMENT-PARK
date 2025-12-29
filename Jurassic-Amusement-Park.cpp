@@ -12,7 +12,8 @@ int money = 5000;
 
 
 void box(){
-	
+
+
 	cout<<"\t\t================================================================================="<<endl;
 	
 	cout<<"\t\t|| "<<setw(78)<<" ||"<<endl;
@@ -96,81 +97,252 @@ void menu(int people[], int *p) {
 
 void zoo(int people) {
     Sleep(2000);
+    string desc_word = 
+        "||============================================================||\n"
+        "||                                                            ||\n"
+        "||  ___   ____  ____  ____  ____  _  ____  _____  _   _  _    ||\n"
+        "|| |   \\ |  __|/ ___|/ ___||  _ \\| ||  _ \\|_   _|| \\ | || |   ||\n"
+        "|| | |  || |__ \\___ \\| |   | |_) | || |_) | | |  |  \\| || |   ||\n"
+        "|| | |  ||  __| ___ \\| |   |  _ /| ||  __/  | |  | . ` || |   ||\n"
+        "|| |___/ |____||____/\\____||_| \\_\\|_||_|  |_____||_| \\_||_|   ||\n"
+        "||                                                            ||\n"
+        "||============================================================||\n";
+        
+     string zoo_final = 
+        "     ____                                               ____\n"
+        "    /  _ \\                                             / _  \\\n"
+        "   (  (_) )===========================================( (_)  )\n"
+        "    \\____/                                             \\____/\n"
+        "      ||   ________    ________      ________            ||\n"
+        "      ||  |___    /|  /   __   \\    /   __   \\           ||\n"
+        "      ||     /   /_|_ |  |  |  |    |  |  |  |           ||\n"
+        "      ||    /      |_||  |  |  |    |  |  |  |           ||\n"
+        "      ||   /   /|  |  |  |__|  |    |  |__|  |           ||\n"
+        "      ||  /___/_|  |  \\________/    \\________/           ||\n"
+        "      ||  |_____|/     \\______/      \\______/            ||\n"
+        "      ||                                                 ||\n"
+        "     ____   _________________________________________   ____\n"
+        "    /  _ \\                                             / _  \\\n"
+        "   (  (_) )===========================================( (_)  )\n"
+        "    \\____/                                             \\____/\n";
 
-    cout << "\n" << setw(73) << "-------" << endl;
-    cout << setw(73) << "| ZOO |" << endl;
-    cout << setw(73) << "-------" << endl;
+    cout << zoo_final << endl;
 
     char r_zoo;
     int p_zoo = 0, r_e_zoo = 1;
-    string r_elephant = "Hurahhhhhhhh!";
+    string r_elephant = 
+    "       / \\______________________________________________/ \\\n"
+    "      |  [!] AUDIO ALERT: ELEPHANT TRUMPET FREQUENCY [!]  |\n"
+    "       \\ /----------------------------------------------\\ /\n"
+    "        |                                                |\n"
+    "        |   _    _  _    _  _____         _    _   _     |\n"
+    "        |  | |  | || |  | ||  __ \\  /\\   | |  | | | |    |\n"
+    "        |  | |__| || |  | || |__) |/  \\  | |__| | | |    |\n"
+    "        |  |  __  || |  | ||  _  // /\\ \\ |  __  | | |    |\n"
+    "        |  | |  | || |__| || | \\ \\/ ____ \\| |  | | |_|    |\n"
+    "        |  |_|  |_| \\____/ |_|  \\_\\/    \\_\\_|  |_| (_)    |\n"
+    "        |                                                |\n"
+    "       / \\______________________________________________/ \\\n"
+    "      |               >>> I ENJOYED IT A LOT       <<<    |\n"
+    "       \\ /----------------------------------------------\\ /\n";
 
     Sleep(500);
+    string yellow = "\033[1;33m";
+    string reset = "\033[0m";
+    cout<<endl;
+    string lion_i = 
+        "||==============================================||\n"
+        "||                                              ||\n"
+        "||             (  \\(|)/  )                      ||\n"
+        "||          _ ((  .---.  )) _                   ||\n"
+        "||         ( )\\ / (0 0) \\ /( )                  ||\n"
+        "||        ( (_ (   'v'   ) _) )                 ||\n"
+        "||         (  \\  \\_   _/  /  )                  ||\n"
+        "||          (   '--`_`--'   )                   ||\n"
+        "||           '--._______.--'                    ||\n"
+        "||               /     \\            _           ||\n"
+        "||              /  | |  \\          ( )          ||\n"
+        "||             /   | |   \\________//            ||\n"
+        "||            (____| |____________/             ||\n"
+        "||                                              ||\n"
+        "||           [ MAJESTIC LION KING ]             ||\n"
+        "||==============================================||\n";
+        cout<<"\n";
+        for(int i = 0 ; i < lion_i.length() ; i++){
+        	cout<<yellow<<lion_i[i]<<reset;
+        	Sleep(0.1);
+		}
+		cout<<endl;
+   string lion_word = 
+        "||================================================||\n"
+        "||                                                ||\n"
+        "||   _        _____   ____    _   _               ||\n"
+        "||  | |      |_   _| / __ \\  | \\ | |              ||\n"
+        "||  | |        | |  | |  | | |  \\| |              ||\n"
+        "||  | |        | |  | |  | | | . ` |              ||\n"
+        "||  | |____   _| |_ | |__| | | |\\  |              ||\n"
+        "||  |______| |_____| \\____/  |_| \\_|              ||\n"
+        "||                                                ||\n"
+        "||================================================||\n";
 
-    cout << "\n" << setw(15) << "---------" << endl;
-    cout << setw(15) << "| LION: |" << endl;
-    cout << setw(16) << "---------\n" << endl;
+    cout <<lion_word << endl;
 
     string d_lion = "The lion is a strong and powerful wild animal known as the \"King of the Jungle\". It belongs to the cat family and is mostly found in \"Africa\". Lions are carnivorous and live in groups called \"Prides\". They are known for their \"loud roar and great strength\".";
 
-    cout << "____________________\n" << endl;
-    cout << "--> Description:" << endl;
-    cout << "____________________\n" << endl;
+    
+
+    cout << desc_word << endl;
 
     for (int i = 0; i < d_lion.length(); i++) {
         cout << d_lion[i];
-        Sleep(50);
+        Sleep(20);
     }
 
     Sleep(500);
+    string red = "\033[1;31m";
+    cout<<endl;
+    string monkey_i = 
+    "||=================================||\n"
+    "||            .-'\"\"\"\"\"\"-.          ||\n"
+    "||          _/ [ @  @ ]  \\_        ||\n"
+    "||         / \\  ( ' ' )  / \\       ||\n"
+    "||        /   \\  `---'  /   \\      ||\n"
+    "||        |    `--...--'    |      ||\n"
+    "||        |  .-----------.  |      ||\n"
+    "||        |_/             \\_|      ||\n"
+    "||          |             |        ||\n"
+    "||          |      ___      |      ||\n"
+    "||          \\____/   \\____/        ||\n"
+    "||                                 ||\n"
+    "||              [ MONKEY ]         ||\n"
+    "||=================================||\n";
+        cout<<"\n";
+        for(int i = 0 ; i < monkey_i.length() ; i++){
+        	cout<<red<<monkey_i[i]<<reset;
+        	Sleep(0.1);
+		}
+		cout<<endl;
+    string monkey_word = 
+    "||====================================================||\n"
+    "||                                                    ||\n"
+    "||  __  __   ____   _   _  _  __  ______ __     __    ||\n"
+    "|| |  \\/  | / __ \\ | \\ | || |/ / |  ____|\\ \\   / /    ||\n"
+    "|| | \\  / || |  | ||  \\| || ' /  | |__    \\ \\_/ /     ||\n"
+    "|| | |\\/| || |  | || . ` ||  <   |  __|    \\   /      ||\n"
+    "|| | |  | || |__| || |\\  || . \\  | |____    | |       ||\n"
+    "|| |_|  |_| \\____/ |_| \\_||_|\\_\\ |______|   |_|       ||\n"
+    "||                                                    ||\n"
+    "||====================================================||\n";
 
-    cout << "\n\n" << setw(15) << "----------" << endl;
-    cout << setw(15) << "| MONKEY |" << endl;
-    cout << setw(16) << "----------\n" << endl;
+cout << monkey_word << endl;
 
-    cout << "____________________\n" << endl;
-    cout << "--> Description:" << endl;
-    cout << "____________________\n" << endl;
+    cout << desc_word << endl;
 
     string d_monkey = "The monkey is an \"intelligent\" and \"playful\" animal found mostly in \"forests\" and \"jungles\". It belongs to the primate family and is known for its \"long tail\" and ability to climb trees. Monkeys eat \"fruits\", \"leaves\", and \"insects\". They are \"social animals\" and live in groups, showing clever and active behavior";
 
     for (int i = 0; i < d_monkey.length(); i++) {
         cout << d_monkey[i];
-        Sleep(50);
+        Sleep(20);
     }
 
     Sleep(500);
+    string orange = "\033[38;5;208m"; 
+    string ostrich_i = 
+    "||============================== ||\n"
+    "||            _  _               ||\n"
+    "||           (o)(o)>             ||\n"
+    "||           _\\  /               ||\n"
+    "||          /   /                ||\n"
+    "||         /   /                 ||\n"
+    "||        /   /                  ||\n"
+    "||       |   |  .----------.     ||\n"
+    "||       |   | /            \\    ||\n"
+    "||        \\   |              |   ||\n"
+    "||         \\  \\             /    ||\n"
+    "||          \\  '-----------'     ||\n"
+    "||           \\___||      ||      ||\n"
+    "||                ||      ||     ||\n"
+    "||               _||_    _||_    ||\n"
+    "||                               ||\n"
+    "||              [ OSTRICH ]      ||\n"
+    "||===============================||\n";
+        
+        cout<<"\n";
+        for(int i = 0 ; i < ostrich_i.length() ; i++){
+        	cout<<orange<<ostrich_i[i]<<reset;
+        	Sleep(0.1);
+		}
+		cout<<endl;
+    string ostrich_word = 
+        "||==========================================================||\n"
+        "||                                                          ||\n"
+        "||   ____    _____  _______  _____   _____  _____  _    _   ||\n"
+        "||  / __ \\  / ____||__   __||  __ \\ |_   _|/ ____|| |  | |  ||\n"
+        "|| | |  | || (___     | |   | |__) |  | | | |     | |__| |  ||\n"
+        "|| | |  | | \\___ \\    | |   |  _  /   | | | |     |  __  |  ||\n"
+        "|| | |__| | ____) |   | |   | | \\ \\  _| |_| |____ | |  | |  ||\n"
+        "||  \\____/ |_____/    |_|   |_|  \\_\\|_____|\\_____||_|  |_|  ||\n"
+        "||                                                          ||\n"
+        "||==========================================================||\n";
 
-    cout << "\n\n" << setw(17) << "------------" << endl;
-    cout << setw(17) << "| OSTRICHE |" << endl;
-    cout << setw(18) << "------------\n" << endl;
+    cout << ostrich_word << endl;
 
-    cout << "____________________\n" << endl;
-    cout << "--> Description:" << endl;
-    cout << "____________________\n" << endl;
+    cout << desc_word << endl;
 
     string d_ostriche = "The ostrich is the \"largest bird\" in the world and is found mainly in \"Africa\". It has a \"long neck\", \"strong legs\", and \"cannot fly\", but it can run very fast. Ostriches eat \"plants\", \"seeds\", and \"insects\". They are known for their \"strength and speed\"";
 
     for (int i = 0; i < d_ostriche.length(); i++) {
         cout << d_ostriche[i];
-        Sleep(50);
+        Sleep(20);
     }
 
     Sleep(500);
+        string blue = "\033[1;36m";
+        cout<<endl;
+        string elephant_i = 
+    "||======================================================||\n"
+    "||              _.-- ,.--.                              ||\n"
+    "||            .'   .'     /                             ||\n"
+    "||            | @       |'..--------._                  ||\n"
+    "||           /        \\._/               '.             ||\n"
+    "||          /    .-.-                       \\           ||\n"
+    "||         (    /    \\                       \\          ||\n"
+    "||          \\\\        '.                  | #           ||\n"
+    "||           \\\\        \\   -.            /              ||\n"
+    "||            :\\        |   )._____.'   \\               ||\n"
+    "||             \"        |   /  \\  |  \\   )              ||\n"
+    "||                      |   |./'  :__ \\.-'              ||\n"
+    "||                      '--'                            ||\n"
+    "||                                                      ||\n"
+    "||                      [ ELEPHANT ]                    ||\n"
+    "||======================================================||\n";
+        cout<<"\n";
+        for(int i = 0 ; i < elephant_i.length() ; i++){
+        	cout<<blue<<elephant_i[i]<<reset;
+        	Sleep(0.1);
+		}
+		cout<<endl;
+    string elephant_word = 
+        "||====================================================================||\n"
+        "||                                                                    ||\n"
+        "||  ______  _       ______  _____   _    _            _   _  _______  ||\n"
+        "|| |  ____|| |     |  ____||  __ \\ | |  | |    /\\    | \\ | ||__   __| ||\n"
+        "|| | |__   | |     | |__   | |__) || |__| |   /  \\   |  \\| |   | |    ||\n"
+        "|| |  __|  | |     |  __|  |  ___/ |  __  |  / /\\ \\  | . ` |   | |    ||\n"
+        "|| | |____ | |____ | |____ | |     | |  | | / ____ \\ | |\\  |   | |    ||\n"
+        "|| |______||______||______||_|     |_|  |_|/_/    \\_\\|_| \\_|   |_|    ||\n"
+        "||                                                                    ||\n"
+        "||====================================================================||\n";
 
-    cout << "\n\n" << setw(17) << "------------" << endl;
-    cout << setw(17) << "| ELEPHANT |" << endl;
-    cout << setw(18) << "------------\n" << endl;
-
-    cout << "____________________\n" << endl;
-    cout << "--> Description:" << endl;
-    cout << "____________________\n" << endl;
+    cout << elephant_word << endl;
+    
+    cout << desc_word << endl;
 
     string d_elephant = "The elephant is the \"largest land animal\" in the world. It has a \"long trunk\", \"big ears\", and \"strong tusks\". Elephants are \"herbivores\" and eat \"grass\", \"leaves\", and \"fruits\". They are \"intelligent\", \"gentle animals\" and usually live in groups.";
 
     for (int i = 0; i < d_elephant.length(); i++) {
         cout << d_elephant[i];
-        Sleep(50);
+        Sleep(20);
     }
 
     cout << "\n\n--> Do you want to ride in Elephant : "<<endl;
@@ -206,7 +378,7 @@ void zoo(int people) {
         cout<<endl;
         for (int i = 0; i < r_elephant.length(); i++) {
             cout << r_elephant[i];
-            Sleep(70);
+            Sleep(0.1);
         }
     } else {
     	cout<<"------------------------------"<<endl;
@@ -214,9 +386,22 @@ void zoo(int people) {
         cout<<"------------------------------"<<endl;
     }
 
-    cout << "\n" << setw(80) << "----------------------------------" << endl;
-    cout << setw(80) << "| THANK YOU FOR VISITING THE ZOO |" << endl;
-    cout << setw(81) << "----------------------------------\n" << endl;
+    string exit_msg = 
+    "||====================================================================||\n"
+    "||                                                                    ||\n"
+    "||  _______ _    _          _   _ _  __  __     ______  _    _        ||\n"
+    "|| |__   __| |  | |   /\\   | \\ | | |/ /  \\ \\   / / __ \\| |  | |       ||\n"
+    "||    | |  | |__| |  /  \\  |  \\| | ' /    \\ \\_/ / |  | | |  | |       ||\n"
+    "||    | |  |  __  | / /\\ \\ | . ` |  <      \\   /| |  | | |  | |       ||\n"
+    "||    | |  | |  | |/ ____ \\| |\\  | . \\      | | | |__| | |__| |       ||\n"
+    "||    |_|  |_|  |_/_/    \\_\\_| \\_|_|\\_\\     |_|  \\____/ \\____/        ||\n"
+    "||                                                                    ||\n"
+    "||--------------------------------------------------------------------||\n"
+    "||                THANK YOU FOR VISITING THE ZOO!                     ||\n"
+    "||             [ GATE STATUS: CLOSED | SEE YOU SOON ]                 ||\n"
+    "||====================================================================||\n";
+
+cout << exit_msg << endl;
 }
 
 struct v_ride {
@@ -228,10 +413,40 @@ void ride(int people) {
     v_ride r[4];
     char l_ride = 'y';
     int p_ride = 0, c_ride , dummy = 1;
+    
+    string insufficient_msg = 
+    "||====================================================================||\n"
+    "||                                                                    ||\n"
+    "||  _____ _   _  _____ _    _ ______ ______ _____ _____ _____ _   _   ||\n"
+    "|| |_   _| \\ | |/ ____| |  | |  ____|  ____|_   _/ ____|_   _| \\ | |  ||\n"
+    "||   | | |  \\| | (___ | |  | | |__  | |__    | || |      | | |  \\| |  ||\n"
+    "||   | | | . ` |\\___ \\| |  | |  __| |  __|   | || |      | | | . ` |  ||\n"
+    "||  _| |_| |\\  |____) | |__| | |    | |     _| || |____ _| |_| |\\  |  ||\n"
+    "|| |_____|_| \\_|_____/ \\____/|_|    |_|    |_____\\_____|_____|_| \\_|  ||\n"
+    "||                                                                    ||\n"
+    "||--------------------------------------------------------------------||\n"
+    "||                [!] ERROR: INSUFFICIENT AMOUNT [!]                  ||\n"
+    "||             PLEASE CHECK YOUR BALANCE AND TRY AGAIN                ||\n"
+    "||====================================================================||\n";
 
-    cout << "\n" << setw(68) << "---------" << endl;
-    cout << setw(68) << "| RIDES |" << endl;
-    cout << setw(69) << "---------\n" << endl;
+    string rides_final = 
+        "      ____                                               ____\n"
+        "     /  _ \\                                             / _  \\\n"
+        "    (  (_) )===========================================( (_)  )\n"
+        "     \\____/                                             \\____/\n"
+        "      ||   ______   _   _____    _______   ______        ||\n"
+        "      ||  |  __  \\ | | |  __ \\  |  _____| /  ____|       ||\n"
+        "      ||  | |__)  || | | |  \\ \\ | |____   | (___         ||\n"
+        "      ||  |  _  _/ | | | |   | ||  ____|   \\___  \\       ||\n"
+        "      ||  | | \\ \\  | | | |__/ / | |_____   ____) |       ||\n"
+        "      ||  |_|  \\_\\ |_| |_____/  |_______| |______/       ||\n"
+        "      ||                                                 ||\n"
+        "     ____   _________________________________________   ____\n"
+        "    /  _ \\                                             / _  \\\n"
+        "   (  (_) )===========================================( (_)  )\n"
+        "    \\____/                                             \\____/\n";
+
+    cout << rides_final << endl;
 
     cout << "--> Do you want to take rides : "<<endl;
     cout<<"---------------------------------"<<endl;
@@ -269,33 +484,25 @@ void ride(int people) {
                 	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
                 money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
             }else{
-            	cout<<"_______________________"<<endl;
-            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
-            	cout<<"-----------------------"<<endl;
+            	cout << insufficient_msg << endl;
 			}
             }else if(c_ride == 2){
                 	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
                 money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
             }else{
-            	cout<<"_______________________"<<endl;
-            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
-            	cout<<"-----------------------"<<endl;
+            	cout << insufficient_msg << endl;
 			}
             }else if(c_ride == 3){
                 	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
                 money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
             }else{
-            	cout<<"_______________________"<<endl;
-            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
-            	cout<<"-----------------------"<<endl;
+            	cout << insufficient_msg << endl;
 			}
             }else if(c_ride == 5){
                 	if(p_ride*r[c_ride - 1].ride_price[c_ride - 1] <= money){
                 money = money - (p_ride * r[c_ride - 1].ride_price[c_ride - 1]);
             }else{
-            	cout<<"_______________________"<<endl;
-            	cout<<"| INSUFFICIENT AMOUNT |"<<endl;
-            	cout<<"-----------------------"<<endl;
+            	cout << insufficient_msg << endl;
 			}
             }else {
             	cout<<"| INVALID INPUT |"<<endl;
@@ -316,13 +523,7 @@ void ride(int people) {
 			}
 			}
             }else {
-				string message = "| SORRY INSUFFUICIENT AMOUNT |";
-				cout<<"______________________________"<<endl;
-                for(int i  = 0 ; i < message.length() ; i++){
-                	cout<<message[i];
-                	Sleep(100);
-				}
-				cout<<"\n------------------------------"<<endl;
+				cout << insufficient_msg << endl;
                 l_ride = 'n';
                 break;
             }
@@ -360,9 +561,22 @@ void ride(int people) {
     cout<<"------------------------------"<<endl;
     cout << "| Total amount you left is : " << money <<" |"<< endl;
     cout<<"------------------------------"<<endl;
-    cout << "\n" << setw(80) << "--------------------------------------" << endl;
-    cout << setw(80) << "| THANK YOU FOR VISITING THE JOYLAND |" << endl;
-    cout << setw(81) << "--------------------------------------\n" << endl;
+    string thank_you = 
+    "||====================================================================||\n"
+    "||                                                                    ||\n"
+    "||  _______ _    _          _   _ _  __  __     ______  _    _        ||\n"
+    "|| |__   __| |  | |   /\\   | \\ | | |/ /  \\ \\   / / __ \\| |  | |       ||\n"
+    "||    | |  | |__| |  /  \\  |  \\| | ' /    \\ \\_/ / |  | | |  | |       ||\n"
+    "||    | |  |  __  | / /\\ \\ | . ` |  <      \\   /| |  | | |  | |       ||\n"
+    "||    | |  | |  | |/ ____ \\| |\\  | . \\      | | | |__| | |__| |       ||\n"
+    "||    |_|  |_|  |_/_/    \\_\\_| \\_|_|\\_\\     |_|  \\____/ \\____/        ||\n"
+    "||                                                                    ||\n"
+    "||--------------------------------------------------------------------||\n"
+    "||              THANK YOU FOR VISITING THE JOYLAND!                   ||\n"
+    "||            [ SYSTEM SHUTDOWN: WE HOPE YOU ENJOYED ]                ||\n"
+    "||====================================================================||\n";
+
+cout << thank_you << endl;
     
 } 
 
@@ -440,9 +654,26 @@ void haunted_house() {
     
     //Frontend:
     
-    cout << "\n" << setw(73) << "=================" << endl;
-    cout << setw(73) << "| HAUNTED HOUSE |" << endl;
-    cout << setw(73) << "=================" << endl;
+    string haunted_house = 
+    "      ____                                               ____\n"
+    "     /  _ \\                                             / _  \\\n"
+    "    (  (_) )===========================================( (_)  )\n"
+    "     \\____/                                             \\____/\n"
+    "      ||    _   _     _     _   _  _   _  _____  ____     ||\n"
+    "      ||   | | | |   / \\   | | | || \\ | ||_   _||  __|    ||\n"
+    "      ||   | |_| |  / _ \\  | | | ||  \\| |  | |  |  _|     ||\n"
+    "      ||   |  _  | / ___ \\ | |_| || |\\  |  | |  | |__     ||\n"
+    "      ||   |_| |_|/_/   \\_\\ \\___/ |_| \\_|  |_|  |____|    ||\n"
+    "      ||    _   _  ____  _   _  ____  _____               ||\n"
+    "      ||   | |_| ||    || | | || ___||  ___|              ||\n"
+    "      ||   |  _  || |  || |_| ||__  ||  __|               ||\n"
+    "      ||   |_| |_||____| \\___/ |____||_____|              ||\n"
+    "     ____                                               ____\n"
+    "    /  _ \\  _________________________________________  / _  \\\n"
+    "   (  (_) )===========================================( (_)  )\n"
+    "    \\____/                                             \\____/\n";
+
+cout << haunted_house << endl;
     
     
     cout<<"--> Lets Take a quick quiz : "<<endl;
@@ -715,10 +946,24 @@ void haunted_house() {
 }
 }else if(choice_haunted == 5){
 	cout<<"------------------------------"<<endl;
-	string leave = "| --> Leaving Haunted House: |";
-	for(int i = 0 ; i < leave.length() ; i++){
-		cout<<leave[i];
-		Sleep(100);
+	string exit_msg = 
+    "||====================================================================||\n"
+    "||                                                                    ||\n"
+    "||  _______ _    _          _   _ _  __  __     ______  _    _        ||\n"
+    "|| |__   __| |  | |   /\\   | \\ | | |/ /  \\ \\   / / __ \\| |  | |       ||\n"
+    "||    | |  | |__| |  /  \\  |  \\| | ' /    \\ \\_/ / |  | | |  | |       ||\n"
+    "||    | |  |  __  | / /\\ \\ | . ` |  <      \\   /| |  | | |  | |       ||\n"
+    "||    | |  | |  | |/ ____ \\| |\\  | . \\      | | | |__| | |__| |       ||\n"
+    "||    |_|  |_|  |_/_/    \\_\\_| \\_|_|\\_\\     |_|  \\____/ \\____/        ||\n"
+    "||                                                                    ||\n"
+    "||--------------------------------------------------------------------||\n"
+    "||                YOU SURVIVED THE HAUNTED HOUSE!                     ||\n"
+    "||             [ THE SPIRITS WILL AWAIT YOUR RETURN ]                 ||\n"
+    "||====================================================================||\n";
+
+	for(int i = 0 ; i < exit_msg.length() ; i++){
+		cout << exit_msg << endl;
+		Sleep(0.1);
 	}
 	cout<<"\n------------------------------"<<endl;
 		quiz_l++;
@@ -746,13 +991,29 @@ int main(){
     int p = 0, w_choice = 1, choice;
     int l_c = 1;
 
-    cout << "\n" << setw(80) << "---------------------------" << endl;
-    cout << setw(80) << "| JURRASIC AMUSEMENT PARK |" << endl;
-    cout << setw(81) << "---------------------------\n" << endl;
+   string simple_jurassic = 
+        "                                   _______________________________________________________        \n"
+        "                                  /                                                       \\       \n"
+        "                             ____/      _____________________________________________      \\____  \n"
+        "                            /    \\     |                                             |     /    \\ \n"
+        "                           | [##] |    |  JJJJJ  U   U  RRRR   AAA   SSSS  IIIII   CCCC|  | [##] |\n"
+        "                           |      |    |      J  U   U  R   R A   A S        I    C    |  |      |\n"
+        "                           | [##] |    |      J  U   U  RRRR  AAAAA  SSS     I    C    |  | [##] |\n"
+        "                           |      |    |  J   J  U   U  R R   A   A     S    I    C    |  |      |\n"
+        "                           | [##] |    |   JJJ    UUU   R  R  A   A SSSS   IIIII   CCCC|  | [##] |\n"
+        "                           |      |    |_____________________________________________|    |      |\n"
+        "                           | [##] |                                                       | [##] |\n"
+        "                           |______|            A M U S E M E N T   P A R K                |______|\n"
+        "                              ||       _____________________________________________         ||    \n"
+        "                             _||______/_____________________________________________\\________||_   \n"
+        "                            |___________________________________________________________________| \n";
+
+    cout <<simple_jurassic << endl;
+    cout<<endl;
     
     box();
     
-    cout << setw(10) << "-> Allowed people are from 1 to 5 : " << endl;
+    cout << setw(10) << "-> Allowed people are from 1 to 10 : " << endl;
     cout<<setw(10) << "-----------------------------------"<<endl;
     
     
@@ -763,7 +1024,7 @@ int main(){
       int *ptr_p = &p;
       
 
-    if(*ptr_p >5 || *ptr_p<=0){
+    if(*ptr_p >10 || *ptr_p<=0){
     	
     	cout<<"\n------------------"<<endl;
     	cout<<"| Again enter... |"<<endl;
