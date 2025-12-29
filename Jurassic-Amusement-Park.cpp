@@ -962,7 +962,7 @@ cout << haunted_house << endl;
     "||====================================================================||\n";
 
 	for(int i = 0 ; i < exit_msg.length() ; i++){
-		cout << exit_msg[i] << endl;
+		cout << exit_msg[i];
 		Sleep(0.1);
 	}
 	cout<<"\n------------------------------"<<endl;
